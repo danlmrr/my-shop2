@@ -21,6 +21,6 @@ email = driver.find_element(By.ID, "email")
 email.send_keys("alex123@gmail.com")
 sumbit = driver.find_element(By.CSS_SELECTOR, "[value='Submit']").click
 
-########### Задание2
+
 
 
