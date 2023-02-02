@@ -127,22 +127,3 @@ book_cover_close = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.CSS_SELECTOR, ".pp_close")))
 book_cover_close.click()
 driver.quit()
-############## Задание 5
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-driver = webdriver.Chrome()
-driver.maximize_window()
-driver.implicitly_wait(5)
-driver.get('https://practice.automationtesting.in/')
-
-my_account = driver.find_element(By.LINK_TEXT, "My Account").click()
-username = driver.find_element(By.ID, "username")
-username.send_keys("alex123@gmail.com")
-password = driver.find_element(By.ID, "password")
-password.send_keys("532Alex131")
-login = driver.find_element(By.NAME, "login").click()
-shop = driver.find_element(By.LINK_TEXT, "Shop").click()
